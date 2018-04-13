@@ -26,4 +26,8 @@ SET(libs roslib roscpp)
 
 ROSBUILD_ADD_EXECUTABLE(cs403proj src/cs403proj.cpp)
 TARGET_LINK_LIBRARIES(cs403proj ${libs} ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${OpenCV_LIBRARIES})
+
+ROSBUILD_ADD_EXECUTABLE(image_converter src/image_converter.cpp)
+TARGET_LINK_LIBRARIES(image_converter ${libs} ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${OpenCV_LIBRARIES})
+
 ROSBUILD_LINK_BOOST(cs403proj system)
